@@ -33,7 +33,7 @@
         <img class="full" src="linux-ha.svg"/>
       </div>
 
-      <div class="step opaque" data-x="-1500" data-y="0" data-scale="2">
+      <div id="infrastructure" class="step opaque" data-x="-1500" data-y="0" data-scale="2">
         <h1>Infrastructure</h1>
       </div>
       <div class="step invisible" data-x="-2500" data-y="0" data-scale="1" data-rotate="90">
@@ -69,74 +69,75 @@
          <img class="with-heading" src="ha_stateless.svg" alt="High availability for an API Node (stateless)" />
       </div>      
 
-      <div class="step opaque" data-x="-1500" data-y="2000" data-scale="2">
+      <div id="compute" class="step opaque" data-x="-1500" data-y="2000" data-scale="2">
         <h1>Compute</h1>
       </div>
-      <div class="step invisible" data-x="-1500" data-y="3000" data-scale="1">
+      <div class="step invisible" data-x="-2500" data-y="2000" data-scale="1" data-rotate="90">
         <p><strong>Guest&nbsp;high&nbsp;availability</strong> has also been addressed in the Grizzly cycle.</p>
       </div>
-      <div class="step invisible" data-x="-1500" data-y="4000" data-scale="1">
+      <div class="step invisible" data-x="-3500" data-y="2000" data-scale="1" data-rotate="90">
         <p>The <code>--host=</code> and<br/><code>--resume_guest_state_on_host_boot</code> hack</p>
       </div>
-      <div class="step invisible" data-x="-1500" data-y="5000" data-scale="1">
+      <div class="step invisible" data-x="-4500" data-y="2000" data-scale="1" data-rotate="90">
         <p><strong>Issues:</strong></p>
 	<p>Breaks&nbsp;live&nbsp;migration, unsafe&nbsp;with&nbsp;volumes</p>
       </div>
-      <div class="step invisible" data-x="-1500" data-y="6000" data-scale="1">
+
+      <div class="step invisible" data-x="-5500" data-y="2000" data-scale="1" data-rotate="90">
         <p><strong>Host evacuation</strong></p>
         <p><code>nova evacuate <em>guest</em> <em>target</em></code></p>
       </div>
-      <div class="step invisible" data-x="-1500" data-y="6000" data-scale="1">
+      <div class="step invisible" data-x="-5500" data-y="2000" data-scale="1" data-rotate="90">
         <p><strong>Host evacuation</strong></p>
         <p><code>nova evacuate <em>guest</em> <em>target</em> \<br/>  --on-shared-storage</code></p>
       </div>
-      <div class="step invisible" data-x="-1500" data-y="7000" data-scale="1">
+      <div class="step invisible" data-x="-6500" data-y="2000" data-scale="1" data-rotate="90">
         <p>Made Grizzly!</p>
         <img class="with-heading" src="made-grizzly.png" alt="A grizzly in the San Diego zoo" />
         <p class="caption">Photo credit: <a href="http://www.flickr.com/photos/timhollosy/">Tim Hollosy</a></p>
       </div>
-      <div class="step invisible" data-x="-2000" data-y="7000" data-scale="1">
+      <div class="step invisible" data-x="-6500" data-y="1500" data-scale="1" data-rotate="90">
         <p>A misnomer?</p>
       </div>
-      <div class="step invisible" data-x="-2500" data-y="7000" data-scale="1">
+      <div class="step invisible" data-x="-6500" data-y="1000" data-scale="1" data-rotate="90">
         <p><strong>When</strong> do you commonly evacuate?</p>
       </div>
-      <div class="step invisible" data-x="-3000" data-y="7000" data-scale="1">
+      <div class="step invisible" data-x="-6500" data-y="500" data-scale="1" data-rotate="90">
         <img class="full" src="storm.jpg" alt="Hurricane Andrew (1992)" />
         <p class="caption">Photo credit: NOAA (Public Domain)</p>
       </div>
-      <div class="step invisible" data-x="-3500" data-y="7000" data-scale="1">
+      <div class="step invisible" data-x="-6500" data-y="0" data-scale="1" data-rotate="90">
         <img class="full" src="storm-destruction.jpg" alt="Destruction from Hurricane Andrew, Dade County, Fla. (1992)" />
         <p class="caption">Photo credit: FEMA (Public Domain)</p>
       </div>
-      <div class="step invisible" data-x="-4000" data-y="7000" data-scale="1">
+      <div class="step invisible" data-x="-6500" data-y="-500" data-scale="1" data-rotate="90">
         <p><code>evacuate</code> issues:<br/>per-guest, per-host, no&nbsp;automation, and only&nbsp;supported&nbsp;from&nbsp;a&nbsp;down&nbsp;host.</p>
       </div>
-      <div class="step invisible" data-x="-4500" data-y="7000" data-scale="1">
+      <div class="step invisible" data-x="-6500" data-y="-1000" data-scale="1" data-rotate="90">
         <p>Also: no evacuation support in <strong>Horizon</strong> (for Grizzly).</p>
         <p>But you probably guessed that.</p>
       </div>
 
-      <div class="step invisible" data-x="-1500" data-y="7000" data-scale="1">
+      <div class="step invisible" data-x="-7500" data-y="2000" data-scale="1" data-rotate="90">
         <p>VM Ensembles</p>
       </div>
-      <div class="step invisible" data-x="-1500" data-y="8000" data-scale="1">
+      <div class="step invisible" data-x="-8500" data-y="2000" data-scale="1" data-rotate="90">
         <p>A means of <strong>grouping&nbsp;guests</strong> so Nova can 
         schedule them in a <strong>resilient</strong> fashion.</p>
       </div>
-      <div class="step invisible" data-x="-1500" data-y="9000" data-scale="1">
+      <div class="step invisible" data-x="-9500" data-y="2000" data-scale="1" data-rotate="90">
         <p>Made Grizzly?</p>
         <img class="with-heading" src="made-grizzly.png" alt="A grizzly in the San Diego zoo" />
       </div>
-      <div class="step invisible" data-x="-1500" data-y="9000" data-scale="1">
+      <div class="step invisible" data-x="-9500" data-y="2000" data-scale="1" data-rotate="90">
         <p>Not quite.</p>
         <img class="with-heading" src="didnt-make-grizzly.png" alt="A grizzly smoking a cigar" />
       </div>
-      <div class="step invisible" data-x="-1500" data-y="10000" data-scale="1">
+      <div class="step invisible" data-x="-10500" data-y="2000" data-scale="1" data-rotate="90">
         <p>Review in Progress</p>
 	<p>Slated for Havana</p>
       </div>
-      <div class="step invisible" data-x="-1500" data-y="11000" data-scale="1">
+      <div class="step invisible" data-x="-11500" data-y="2000" data-scale="1" data-rotate="90">
         <p>Grizzly Workaround:</p>
 	<p><code>FilterScheduler</code>, <code>AffinityFilter</code>,
 	<code>DifferentHostFilter</code></p>
