@@ -13,11 +13,10 @@
       <b>Safari</b> or <b>Firefox</b> browser.</p>
     </div>
     <div id="impress">
-      <div class="step slide" data-x="0" data-y="-2000" data-scale="1">
+      <div class="step slide invisible" data-x="0" data-y="-2000" data-scale="1">
         <img class="with-heading" src="openstack-logo.svg" style="float:left; margin-right: 5%;"/>
-        <h1>High Availability Update</h1>
+        <p>More Reliable, more Resilient, more Redundant</p>
         <p>OpenStack High Availability in Grizzly and Beyond</p>
-        <div class="notes"><p></p></div>
       </div>
       <div class="step invisible" data-x="0" data-y="-3000" data-scale="1">
         <p>Who the <strong>$?#%</strong> is this guy?</p>
@@ -28,49 +27,50 @@
         <p><a href="http://goo.gl/ANHQe">http://goo.gl/ANHQe</a></p>
         <p><code>florian@hastexo.com</code></p>
         <p><a href="https://twitter.com/hastexo"><code>@hastexo</code></a></p>
+	<p>Booth C8</p>
       </div>
       <div class="step invisible" data-x="0" data-y="1000" data-scale="4">
-        <img class="full" src="linux-ha.svg">
+        <img class="full" src="linux-ha.svg"/>
       </div>
 
-      <div class="step opaque" data-x="0" data-y="0" data-scale="2">
+      <div class="step opaque" data-x="-1500" data-y="0" data-scale="2">
         <h1>Infrastructure</h1>
       </div>
-      <div class="step invisible" data-x="0" data-y="1000" data-scale="1">
+      <div class="step invisible" data-x="-1500" data-y="1000" data-scale="1">
         <p>Infrastructure HA is <strong>high availability</strong> for OpenStack Infrastructure Services.</p>
         <p>Think database, AMQP&nbsp;server, API&nbsp;services, etc.</p>
       </div>
-      <div class="step invisible" data-x="0" data-y="2000" data-scale="1">
+      <div class="step invisible" data-x="-1500" data-y="2000" data-scale="1">
         <p>We have to consider at least 5 OpenStack <strong>node types</strong> for Infrastructure HA.</p>
       </div>
-      <div class="step invisible" data-x="0" data-y="3000" data-scale="1">
+      <div class="step invisible" data-x="-1500" data-y="3000" data-scale="1">
         <p>Cloud Controller</p>
         <p>API Node</p>
         <p>Network Node</p>
         <p>Compute Node</p>
         <p>Storage Controller</p>
       </div>
-      <div class="step invisible" data-x="0" data-y="4000" data-scale="1">
-        <p>All use the <strong>same&nbsp;high&nbsp;availability&nbsp;stack,</strong> just with different configurations.</p>
+      <div class="step invisible" data-x="-1500" data-y="4000" data-scale="1">
+        <p>All can use the <strong>same&nbsp;high&nbsp;availability&nbsp;stack,</strong> just with different configurations.</p>
       </div>
-      <div class="step invisible" data-x="0" data-y="5000" data-scale="1">
+      <div class="step invisible" data-x="-1500" data-y="5000" data-scale="1">
         <img class="full" src="pacemaker_logo.svg" alt="Pacemaker logo"/>
       </div>
-      <div class="step invisible" data-x="0" data-y="6000" data-scale="1">
+      <div class="step invisible" data-x="-1500" data-y="6000" data-scale="1">
         <p>We have <strong>reference&nbsp;configurations</strong> for Pacemaker and OpenStack HA,
         covering all OpenStack Infrastructure Services.</p>
       </div>
-      <div class="step invisible" data-x="500" data-y="6000" data-scale="1">
+      <div class="step invisible" data-x="-1000" data-y="6000" data-scale="1">
          <p>Example: Cloud Controller HA</p>
          <img class="with-heading" src="ha_stateful.svg" alt="High availability for a Cloud Controller (with shared storage)" />
       </div>
-      <div class="step invisible" data-x="1000" data-y="6000" data-scale="1">
+      <div class="step invisible" data-x="-500" data-y="6000" data-scale="1">
          <p>Example: API Node HA</p>
          <img class="with-heading" src="ha_stateless.svg" alt="High availability for an API Node (stateless)" />
       </div>      
 
       <div class="step opaque" data-x="-1500" data-y="2000" data-scale="2">
-        <h1>Nova</h1>
+        <h1>Compute</h1>
       </div>
       <div class="step invisible" data-x="-1500" data-y="3000" data-scale="1">
         <p><strong>Guest&nbsp;high&nbsp;availability</strong> has also been addressed in the Grizzly cycle.</p>
@@ -79,33 +79,44 @@
         <p>The <code>--host=</code> and<br/><code>--resume_guest_state_on_host_boot</code> hack</p>
       </div>
       <div class="step invisible" data-x="-1500" data-y="5000" data-scale="1">
-        <p>Issues: breaks live migration, unsafe with volumes</p>
+        <p><strong>Issues:</strong></p>
+	<p>Breaks&nbsp;live&nbsp;migration, unsafe&nbsp;with&nbsp;volumes</p>
       </div>
       <div class="step invisible" data-x="-1500" data-y="6000" data-scale="1">
-        <p>Host evacuation</p>
+        <p><strong>Host evacuation</strong></p>
         <p><code>nova evacuate <em>guest</em> <em>target</em></code></p>
       </div>
-      <div class="step invisible" data-x="-2000" data-y="6000" data-scale="1">
+      <div class="step invisible" data-x="-1500" data-y="6000" data-scale="1">
+        <p><strong>Host evacuation</strong></p>
+        <p><code>nova evacuate <em>guest</em> <em>target</em> \<br/>  --on-shared-storage</code></p>
+      </div>
+      <div class="step invisible" data-x="-1500" data-y="7000" data-scale="1">
+        <p>Made Grizzly!</p>
+        <img class="with-heading" src="made-grizzly.png" alt="A grizzly in the San Diego zoo" />
+        <p class="caption">Photo credit: <a href="http://www.flickr.com/photos/timhollosy/">Tim Hollosy</a></p>
+      </div>
+      <div class="step invisible" data-x="-2000" data-y="7000" data-scale="1">
         <p>A misnomer?</p>
       </div>
-      <div class="step invisible" data-x="-2500" data-y="6000" data-scale="1">
+      <div class="step invisible" data-x="-2500" data-y="7000" data-scale="1">
         <p><strong>When</strong> do you commonly evacuate?</p>
       </div>
-      <div class="step invisible" data-x="-3000" data-y="6000" data-scale="1">
+      <div class="step invisible" data-x="-3000" data-y="7000" data-scale="1">
         <img class="full" src="storm.jpg" alt="Hurricane Andrew (1992)" />
         <p class="caption">Photo credit: NOAA (Public Domain)</p>
       </div>
-      <div class="step invisible" data-x="-3500" data-y="6000" data-scale="1">
+      <div class="step invisible" data-x="-3500" data-y="7000" data-scale="1">
         <img class="full" src="storm-destruction.jpg" alt="Destruction from Hurricane Andrew, Dade County, Fla. (1992)" />
         <p class="caption">Photo credit: FEMA (Public Domain)</p>
       </div>
-      <div class="step invisible" data-x="-4000" data-y="6000" data-scale="1">
+      <div class="step invisible" data-x="-4000" data-y="7000" data-scale="1">
         <p><code>evacuate</code> issues:<br/>per-guest, per-host, no&nbsp;automation, and only&nbsp;supported&nbsp;from&nbsp;a&nbsp;down&nbsp;host.</p>
       </div>
-      <div class="step invisible" data-x="-4500" data-y="6000" data-scale="1">
+      <div class="step invisible" data-x="-4500" data-y="7000" data-scale="1">
         <p>Also: no evacuation support in <strong>Horizon</strong> (for Grizzly).</p>
         <p>But you probably guessed that.</p>
       </div>
+
       <div class="step invisible" data-x="-1500" data-y="7000" data-scale="1">
         <p>VM Ensembles</p>
       </div>
@@ -114,33 +125,53 @@
         schedule them in a <strong>resilient</strong> fashion.</p>
       </div>
       <div class="step invisible" data-x="-1500" data-y="9000" data-scale="1">
-        <p><a href="https://blueprints.launchpad.net/nova/+spec/vm-ensembles">Will it make Grizzly?</a></p>
+        <p>Made Grizzly?</p>
+        <img class="with-heading" src="made-grizzly.png" alt="A grizzly in the San Diego zoo" />
       </div>
-
+      <div class="step invisible" data-x="-1500" data-y="9000" data-scale="1">
+        <p>Not quite.</p>
+        <img class="with-heading" src="didnt-make-grizzly.png" alt="A grizzly smoking a cigar" />
+      </div>
+      <div class="step invisible" data-x="-1500" data-y="10000" data-scale="1">
+        <p>Review in Progress</p>
+	<p>Slated for Havana</p>
+      </div>
+      <div class="step invisible" data-x="-1500" data-y="11000" data-scale="1">
+        <p>Grizzly Workaround:</p>
+	<p><code>FilterScheduler</code>, <code>AffinityFilter</code>,
+	<code>DifferentHostFilter</code></p>
+      </div>
 
       <div id="quantum" class="step opaque" data-x="1500" data-y="2000" data-scale="2">
-        <h1>Quantum</h1>
+        <h1>Networking</h1>
       </div>
       <div class="step invisible" data-x="1500" data-y="3000" data-scale="1">
-        <p>Quantum is an <strong>infrastructure service</strong> that can use
+        <p>OpenStack Networking is an <strong>infrastructure service</strong> that can use
          the same HA approach as all others for <strong>Active/Passive&nbsp;failover.</strong></p>
         <img class="full" src="pacemaker_logo.svg" alt="Pacemaker logo"/>
       </div>
       <div class="step invisible" data-x="1500" data-y="4000" data-scale="1">
-        <p><strong>Works well</strong> for <code>quantum-server</code> and L3 agent.</p>
+        <p><strong>Worked well</strong> in Folsom for <code>quantum-server</code> and L3 agent.</p>
       </div>
       <div class="step invisible" data-x="1500" data-y="5000" data-scale="1">
-        <p>Has <strong>minor limitations</strong> for DHCP&nbsp;agent.</p>
+        <p>Had <strong>minor limitations</strong> for DHCP&nbsp;agent.</p>
       </div>
       <div class="step invisible" data-x="1500" data-y="6000" data-scale="1">
-        <p>However, pure Active/Passive approach <strong>does&nbsp;not&nbsp;scale&nbsp;well.</strong></p>
+        <p>However, pure Active/Passive approach <strong>did&nbsp;not&nbsp;scale&nbsp;well.</strong></p>
       </div>
       <div class="step invisible" data-x="1500" data-y="7000" data-scale="1">
-        <p>A patch to support <strong>multiple DHCP and L3 agents</strong> addresses this.</p>
+        <p>quantum-scheduler patch for <strong>multiple DHCP and L3 agents</strong> addresses this.</p>
       </div>
-      <div class="step invisible" data-x="2000" data-y="7000" data-scale="1">
-        <p><a href="https://review.openstack.org/#/c/21175/">Will it make Grizzly?</a></p>
+      <div class="step invisible" data-x="1500" data-y="8000" data-scale="1">
+        <p>Made Grizzly!</p>
+        <img class="with-heading" src="made-grizzly.png" alt="A grizzly in the San Diego zoo" />
       </div>
+
+
+      <div class="step opaque" data-x="1500" data-y="0" data-scale="2">
+        <h1>Storage</h1>
+      </div>
+
 
       <div id="other" class="step invisible" data-x="0" data-y="10000" data-scale="2">
         <h1>Other Stuff</h1>
