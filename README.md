@@ -1,8 +1,8 @@
-Slides from the 2nd Swiss OpenStack User Group Meetup
-=====================================================
+Slides from the April 2013 OpenStack Summit
+===========================================
 
-February 19, 2013
-Zurich
+April 17, 2013
+Portland
 
 These slides rely on impress.js, which they expect to be checked out
 into a sibling directory named `impress.js`.
