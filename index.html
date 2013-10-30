@@ -1,7 +1,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>More Reliable, more Resilient, more Redundant: OpenStack
-    High Availability in Grizzly and Beyond</title>
+    <title>OpenStack High Availability : Havana and Icehouse</title>
     <link rel="stylesheet" type="text/css" href="impress.css" />
     <link rel="stylesheet" type="text/css" href="impress-override.css" />
   </head>
@@ -16,11 +15,12 @@
     <div id="impress">
       <div class="step slide invisible" data-x="0" data-y="-2000" data-scale="1">
         <img class="with-heading" src="openstack-logo.svg" style="float:left; margin-right: 5%;"/>
-        <p>More Reliable, more Resilient, more Redundant</p>
-        <p>OpenStack High Availability in Grizzly and Beyond</p>
+        <p>OpenStack High Availability Update</p>
+        <p><b>Havana & Icehouse</b></p>
       </div>
+
       <div class="step invisible" data-x="0" data-y="-3000" data-scale="1">
-        <p>Who the <strong>$?#%</strong> is this guy?</p>
+        <p>Who are these guys ?</p>
       </div>
       <div class="step invisible" data-x="0" data-y="-4000" data-scale="1">
         <h3>Florian Haas</h3>
@@ -28,18 +28,32 @@
         <p><a href="http://goo.gl/ANHQe">http://goo.gl/ANHQe</a></p>
         <p><code>florian@hastexo.com</code></p>
         <p><a href="https://twitter.com/hastexo"><code>@hastexo</code></a></p>
-	<p>Booth C8</p>
       </div>
+
+     <div class="step invisible" data-x="0" data-y="-3000" data-scale="1" data-rotate="90">
+        <h3>Syed Armani</h3>
+        <p><a href="http://www.hastexo.com/who/florian">Senior Consultant at hastexo</a></p>        
+        <p><code>syed.armani@hastexo.com</code></p>
+        <p><a href="https://twitter.com/syedarmani"><code>@syedarmani</code></a></p>
+      </div> 
+    
+
+    <div class="step invisible" data-x="0" data-y="0" data-scale="1" data-rotate="90">
+        <p> We don't want this ? </p>
+        <img class="full" src="matrix.gif" alt="matrix"/>
+      </div>
+
       <div class="step invisible" data-x="0" data-y="1000" data-scale="4">
         <img class="full" src="linux-ha.svg"/>
       </div>
 
+
       <div id="infrastructure" class="step opaque" data-x="-1500" data-y="0" data-scale="2">
         <h1>Infrastructure</h1>
       </div>
-      <div class="step invisible" data-x="-2500" data-y="0" data-scale="1" data-rotate="90">
-        <p>Infrastructure HA is <strong>high availability</strong> for OpenStack Infrastructure Services.</p>
-        <p>Think database, AMQP&nbsp;server, API&nbsp;services, etc.</p>
+      <div class="step invisible" data-x="-3000" data-y="0" data-scale="1" data-rotate="90">
+        <p><strong>Infrastructure HA</strong> is high availability for OpenStack Infrastructure Services.</p>
+        <p>Think ... <strong>Database, AMQP&nbsp;server, API services, etc.</strong></p>
       </div>
       <div class="step invisible" data-x="-3500" data-y="0" data-scale="1" data-rotate="90">
         <p>We have to consider at least 5 OpenStack <strong>node types</strong> for Infrastructure HA.</p>
@@ -65,6 +79,21 @@
          <p>Example: Cloud Controller HA</p>
          <img class="with-heading" src="ha_stateful.svg" alt="High availability for a Cloud Controller (with shared storage)" />
       </div>
+      
+      <div class="step invisible" data-x="-4500" data-y="0" data-scale="1" data-rotate="90">
+        <p>Highly Available MySql using <b>Galera</b></p>
+       </div>
+      <div class="step invisible" data-x="0" data-y="13000" data-scale="1">
+        <p>RabbitMQ/Kombu</p>
+      </div>
+      <div class="step invisible" data-x="-4500" data-y="0" data-scale="1" data-rotate="90">
+        <p><strong>Glance</strong></p>
+        <p>Multiple image locations</p>
+       </div>
+      <div class="step invisible" data-x="-4500" data-y="0" data-scale="1" data-rotate="90">
+        <p>Cinder Backend for Glance</p>
+       </div>
+
       <div class="step invisible" data-x="-7500" data-y="1000" data-scale="1" data-rotate="90">
          <p>Example: API Node HA</p>
          <img class="with-heading" src="ha_stateless.svg" alt="High availability for an API Node (stateless)" />
@@ -73,77 +102,22 @@
       <div id="compute" class="step opaque" data-x="-1500" data-y="2000" data-scale="2">
         <h1>Compute</h1>
       </div>
-      <div class="step invisible" data-x="-2500" data-y="2000" data-scale="1" data-rotate="90">
-        <p><strong>Guest&nbsp;high&nbsp;availability</strong> has also been addressed in the Grizzly cycle.</p>
-      </div>
-      <div class="step invisible" data-x="-3500" data-y="2000" data-scale="1" data-rotate="90">
-        <p>The <code>--host=</code> and<br/><code>--resume_guest_state_on_host_boot</code> hack</p>
-      </div>
-      <div class="step invisible" data-x="-4500" data-y="2000" data-scale="1" data-rotate="90">
-        <p><strong>Issues:</strong></p>
-	<p>Breaks&nbsp;live&nbsp;migration, unsafe&nbsp;with&nbsp;volumes</p>
-      </div>
 
-      <div class="step invisible" data-x="-5500" data-y="2000" data-scale="1" data-rotate="90">
+      <div class="step invisible" data-x="-4500" data-y="0" data-scale="1" data-rotate="90">
         <p><strong>Host evacuation</strong></p>
-        <p><code>nova evacuate <em>guest</em> <em>target</em></code></p>
-      </div>
-      <div class="step invisible" data-x="-5500" data-y="2000" data-scale="1" data-rotate="90">
-        <p><strong>Host evacuation</strong></p>
-        <p><code>nova evacuate <em>guest</em> <em>target</em> \<br/>  --on-shared-storage</code></p>
-      </div>
-      <div class="step invisible" data-x="-6500" data-y="2000" data-scale="1" data-rotate="90">
-        <p>Made Grizzly!</p>
-        <img class="with-heading" src="made-grizzly.png" alt="A grizzly in the San Diego zoo" />
-        <p class="caption">Photo credit: <a href="http://www.flickr.com/photos/timhollosy/">Tim Hollosy</a></p>
-      </div>
-      <div class="step invisible" data-x="-6500" data-y="1500" data-scale="1" data-rotate="90">
-        <p>A misnomer?</p>
-      </div>
-      <div class="step invisible" data-x="-6500" data-y="1000" data-scale="1" data-rotate="90">
-        <p><strong>When</strong> do you commonly evacuate?</p>
-      </div>
-      <div class="step invisible" data-x="-6500" data-y="500" data-scale="1" data-rotate="90">
-        <img class="full" src="storm.jpg" alt="Hurricane Andrew (1992)" />
-        <p class="caption">Photo credit: NOAA (Public Domain)</p>
-      </div>
-      <div class="step invisible" data-x="-6500" data-y="0" data-scale="1" data-rotate="90">
-        <img class="full" src="storm-destruction.jpg" alt="Destruction from Hurricane Andrew, Dade County, Fla. (1992)" />
-        <p class="caption">Photo credit: FEMA (Public Domain)</p>
-      </div>
-      <div class="step invisible" data-x="-6500" data-y="-500" data-scale="1" data-rotate="90">
-        <p><code>evacuate</code> issues:<br/>per-guest, per-host, no&nbsp;automation, and only&nbsp;supported&nbsp;from&nbsp;a&nbsp;down&nbsp;host.</p>
-      </div>
+        <p> <em>nova host-evacuate</em></p>
+       </div>
+      <div class="step invisible" data-x="-4500" data-y="0" data-scale="1" data-rotate="90">
+        <p><b>query-scheduler</b></p>
+       </div>
+      <div class="step invisible" data-x="-4500" data-y="0" data-scale="1" data-rotate="90">
+        <p><b> Instance HA:</b> Finally, there's a Design Summit session!</p>
+       </div>
+
       <div class="step invisible" data-x="-6500" data-y="-1000" data-scale="1" data-rotate="90">
         <p>Also: no evacuation support in <strong>Horizon</strong> (for Grizzly).</p>
         <p>But you probably guessed that.</p>
-      </div>
-
-      <div class="step invisible" data-x="-7500" data-y="2000" data-scale="1" data-rotate="90">
-        <p>VM Ensembles</p>
-      </div>
-      <div class="step invisible" data-x="-8500" data-y="2000" data-scale="1" data-rotate="90">
-        <p>A means of <strong>grouping&nbsp;guests</strong> so Nova can 
-        schedule them in a <strong>resilient</strong> fashion.</p>
-      </div>
-      <div class="step invisible" data-x="-9500" data-y="2000" data-scale="1" data-rotate="90">
-        <p>Made Grizzly?</p>
-        <img class="with-heading" src="made-grizzly.png" alt="A grizzly in the San Diego zoo" />
-      </div>
-      <div class="step invisible" data-x="-9500" data-y="2000" data-scale="1" data-rotate="90">
-        <p>Not quite.</p>
-        <img class="with-heading" src="didnt-make-grizzly.png" alt="A grizzly smoking a cigar" />
-      </div>
-      <div class="step invisible" data-x="-10500" data-y="2000" data-scale="1" data-rotate="90">
-        <p>Review in Progress</p>
-	<p>Slated for Havana</p>
-      </div>
-      <div class="step invisible" data-x="-11500" data-y="2000" data-scale="1" data-rotate="90">
-        <p>Grizzly Workaround:</p>
-	<p><code>FilterScheduler</code>, <code>AffinityFilter</code>,
-	<code>DifferentHostFilter</code></p>
-      </div>
-
+      </div>    
       <div id="quantum" class="step opaque" data-x="1500" data-y="2000" data-scale="2">
         <h1>Networking</h1>
       </div>
@@ -152,76 +126,51 @@
          the same HA approach as all others for <strong>Active/Passive&nbsp;failover.</strong></p>
         <img class="full" src="pacemaker_logo.svg" alt="Pacemaker logo"/>
       </div>
-      <div class="step invisible" data-x="3500" data-y="2000" data-scale="1" data-rotate="-90">
-        <p><strong>Worked well</strong> in Folsom for <code>quantum-server</code> and L3 agent.</p>
-      </div>
-      <div class="step invisible" data-x="4500" data-y="2000" data-scale="1" data-rotate="-90">
-        <p>Had <strong>minor limitations</strong> for DHCP&nbsp;agent.</p>
-      </div>
-      <div class="step invisible" data-x="5500" data-y="2000" data-scale="1" data-rotate="-90">
-        <p>However, pure Active/Passive approach <strong>did&nbsp;not&nbsp;scale&nbsp;well.</strong></p>
-      </div>
-      <div class="step invisible" data-x="6500" data-y="2000" data-scale="1" data-rotate="-90">
-        <p>quantum-scheduler patch for <strong>multiple DHCP and L3 agents</strong> addresses this.</p>
-      </div>
-      <div class="step invisible" data-x="7500" data-y="2000" data-scale="1" data-rotate="-90">
-        <p>Made Grizzly!</p>
-        <img class="with-heading" src="made-grizzly.png" alt="A grizzly in the San Diego zoo" />
-      </div>
+     <div class="step invisible" data-x="-4500" data-y="0" data-scale="1" data-rotate="90">
+        <p><b>No multi_host </b></p>
+       </div>
 
+    <div class="step invisible" data-x="-4500" data-y="0" data-scale="1" data-rotate="90">
+        <p><b>L3 agent</b></p>
+       </div>
 
       <div class="step opaque" data-x="1500" data-y="0" data-scale="2">
         <h1>Storage</h1>
       </div>
-      <div class="step invisible" data-x="2500" data-y="0" data-scale="1" data-rotate="-90">
-        <img class="full" src="batman-robin.png" alt="Batman slapping Robin for being slow to upgrade" />
-      </div>
-      <div class="step invisible" data-x="3500" data-y="0" data-scale="1" data-rotate="-90">
-        <p>Cinder: <strong>insane</strong> number of new drivers</p>
-      </div>
-      <div class="step invisible" data-x="4500" data-y="0" data-scale="1" data-rotate="-90">
-        <p>NFS</p>
-        <p>GlusterFS</p>
-        <p>LeftHand</p>
-        <p>3PAR</p>
-      </div>
+    <div class="step invisible" data-x="-4500" data-y="0" data-scale="1" data-rotate="90">
+        <p>cinder volume options for GlusterFS/NFS</p>
+       </div>
+      
       <div class="step invisible" data-x="5500" data-y="0" data-scale="1" data-rotate="-90">
 	<img class="full" src="pacemaker_logo.svg" alt="Pacemaker logo"/>
       </div>
-      <div class="step invisible" data-x="6500" data-y="0" data-scale="1" data-rotate="-90">
-        <p>Built-in Cinder HA coming in Havana</p>
-        <p><a href="https://blueprints.launchpad.net/cinder/+spec/ha-cinder-services">(probably)</a></p>
-      </div>
-
-
-      <div id="other" class="step invisible" data-x="0" data-y="10000" data-scale="2">
-        <h1>Other Stuff</h1>
-      </div>
-      <div class="step invisible" data-x="0" data-y="11000" data-scale="1">
-        <p>Libvirt watchdog support in Nova and Glance</p>
-      </div>
       <div class="step invisible" data-x="0" data-y="12000" data-scale="1">
-        <p>Heat</p>
+        <p><b>Heat</b></p>
       </div>
-      <div class="step invisible" data-x="0" data-y="13000" data-scale="1">
-        <p>RabbitMQ/Kombu</p>
+
+      <div class="step invisible" data-x="0" data-y="12000" data-scale="1">
+        <p>HA for services running inside an instance.</p>
       </div>
-      <div class="step invisible" data-x="0" data-y="14000" data-scale="1">
-        <p>ZeroMQ</p>
+
+      <div class="step invisible" data-x="0" data-y="12000" data-scale="1">
+        <p>HA for individual instances.</p>
       </div>
-      <div class="step invisible" data-x="0" data-y="15000" data-scale="1">
-        <p>MySQL/Galera</p>
+
+      <div class="step invisible" data-x="0" data-y="12000" data-scale="1">
+        <p>HA for stacks.</p>
+      </div>
+
+      <div class="step invisible" data-x="0" data-y="12000" data-scale="1">
+        <p><b>Ceilometer</b></p>
       </div>
       <div class="step invisible" data-x="0" data-y="16000" data-scale="1">
         <p>And there is <strong>almost&nbsp;certainly</strong> stuff that I omitted.</p>
       </div>
-
-
       <div class="step invisible" data-x="0" data-y="20000" data-scale="1">
         <p>Liked this talk?</p>
         <p><code>@hastexo</code>
-        <p class="small"><a href="http://www.hastexo.com/openstacksummitapril2013" >http://www.hastexo.com/openstacksummitapril2013</a></p>
-        <p class="small"><a href="https://github.com/fghaas/openstacksummitapril2013" >https://github.com/fghaas/openstacksummitapril2013</a></p>
+        <p class="small"><a href="" ></a></p>
+        <p class="small"><a href="" ></a></p>
         <p><a href="http://creativecommons.org/licenses/by-sa/2.0/" ><img src="by-sa.svg" alt="CC-BY-SA 2.0" /></a></p>
       </div>
 
