@@ -19,53 +19,53 @@
   </head>
   <body>
     <div class="reveal">
-      <div class="slides">
-      <div class="step slide invisible" data-x="0" data-y="-2000" data-scale="1">
+      <section>
+      <section data-x="0" data-y="-2000" data-scale="1">
         <img class="with-heading" src="openstack-logo.svg" style="float:left; margin-right: 5%;"/>
         <p>High Availability Update</p>
         <p>Havana &amp; Icehouse</p>
-      </div>
+      </section>
 
-      <div class="step invisible" data-x="0" data-y="-3000" data-scale="1">
+      <section data-x="0" data-y="-3000" data-scale="1">
         <p>Who are these guys?</p>
-      </div>
-      <div class="step invisible" data-x="0" data-y="-4000" data-scale="1">
+      </section>
+      <section data-x="0" data-y="-4000" data-scale="1">
         <h3>Florian Haas</h3>
         <p><a href="http://www.hastexo.com/who/florian">http://www.hastexo.com/who/florian</a></p>
         <p><a href="http://goo.gl/ANHQe">http://goo.gl/ANHQe</a></p>
         <p><code>florian@hastexo.com</code></p>
         <p><a href="https://twitter.com/hastexo"><code>@hastexo</code></a></p>
-      </div>
+      </section>
 
-     <div class="step invisible" data-x="0" data-y="-3000" data-scale="1" data-rotate="90">
+     <section data-x="0" data-y="-3000" data-scale="1" data-rotate="90">
         <h3>Syed Armani</h3>
         <p><a href="http://www.hastexo.com/who/florian">Senior Consultant at hastexo</a></p>        
         <p><code>syed.armani@hastexo.com</code></p>
         <p><a href="https://twitter.com/syedarmani"><code>@syedarmani</code></a></p>
-      </div> 
+      </section> 
     
 
-    <div class="step invisible" data-x="0" data-y="0" data-scale="1" data-rotate="90">
+    <section data-x="0" data-y="0" data-scale="1" data-rotate="90">
         <p>We don't want this</p>
         <img class="full" src="matrix.gif" alt="matrix"/>
-      </div>
+      </section>
 
-      <div class="step invisible" data-x="0" data-y="1000" data-scale="4">
+      <section data-x="0" data-y="1000" data-scale="4">
         <img class="full" src="linux-ha.svg"/>
-      </div>
+      </section>
 
 
       <div id="infrastructure" class="step opaque" data-x="-1500" data-y="0" data-scale="2">
         <h1>Infrastructure</h1>
-      </div>
-      <div class="step invisible" data-x="-3000" data-y="0" data-scale="1" data-rotate="90">
+      </section>
+      <section data-x="-3000" data-y="0" data-scale="1" data-rotate="90">
         <p><strong>Infrastructure HA</strong> is high availability for OpenStack Infrastructure Services.</p>
         <p>Think ... <strong>Database, AMQP&nbsp;server, API services, etc.</strong></p>
-      </div>
-      <div class="step invisible" data-x="-3500" data-y="0" data-scale="1" data-rotate="90">
+      </section>
+      <section data-x="-3500" data-y="0" data-scale="1" data-rotate="90">
         <p>We have to consider at least <strong>7</strong> OpenStack <strong>node types</strong> for Infrastructure HA.</p>
-      </div>
-      <div class="step invisible" data-x="-4500" data-y="0" data-scale="1" data-rotate="90">
+      </section>
+      <section data-x="-4500" data-y="0" data-scale="1" data-rotate="90">
         <p>Cloud Controller</p>
         <p>API Node</p>
         <p>Network Node</p>
@@ -73,129 +73,129 @@
         <p>Storage Controller</p>
 	<p>Metering Node</p>
 	<p>Orchestration Node</p>
-      </div>
-      <div class="step invisible" data-x="-5500" data-y="0" data-scale="1" data-rotate="90">
+      </section>
+      <section data-x="-5500" data-y="0" data-scale="1" data-rotate="90">
         <p>All can use the <strong>same&nbsp;high&nbsp;availability&nbsp;stack,</strong> just with different configurations.</p>
-      </div>
-      <div class="step invisible" data-x="-6500" data-y="0" data-scale="1" data-rotate="90">
+      </section>
+      <section data-x="-6500" data-y="0" data-scale="1" data-rotate="90">
         <img class="full" src="pacemaker_logo.svg" alt="Pacemaker logo"/>
-      </div>
-      <div class="step invisible" data-x="-7500" data-y="0" data-scale="1" data-rotate="90">
+      </section>
+      <section data-x="-7500" data-y="0" data-scale="1" data-rotate="90">
         <p>We have <strong>reference&nbsp;configurations</strong> for Pacemaker and OpenStack HA,
         covering all OpenStack Infrastructure Services.</p>
-      </div>
-      <div class="step invisible" data-x="-7500" data-y="500" data-scale="1" data-rotate="90">
+      </section>
+      <section data-x="-7500" data-y="500" data-scale="1" data-rotate="90">
          <p>Example: Cloud Controller HA</p>
          <img class="with-heading" src="ha_stateful.svg" alt="High availability for a Cloud Controller (with shared storage)" />
-      </div>
+      </section>
       
-      <div class="step invisible" data-x="-4500" data-y="0" data-scale="1" data-rotate="90">
+      <section data-x="-4500" data-y="0" data-scale="1" data-rotate="90">
         <p>Highly Available MySql using <b>Galera</b></p>
-       </div>
-      <div class="step invisible" data-x="0" data-y="1000" data-scale="1">
+       </section>
+      <section data-x="0" data-y="1000" data-scale="1">
         <img class="full" src="galera.png"/>
       <p>Multi-Master MySql with Galera</p>
-      </div>
-      <div class="step invisible" data-x="0" data-y="13000" data-scale="1">
+      </section>
+      <section data-x="0" data-y="13000" data-scale="1">
         <p>RabbitMQ/Kombu</p>
-      </div>
-      <div class="step invisible" data-x="-4500" data-y="0" data-scale="1" data-rotate="90">
+      </section>
+      <section data-x="-4500" data-y="0" data-scale="1" data-rotate="90">
         <p><strong>Glance</strong></p>
         <p>Multiple image locations</p>
-       </div>
-      <div class="step invisible" data-x="-4500" data-y="0" data-scale="1" data-rotate="90">
+       </section>
+      <section data-x="-4500" data-y="0" data-scale="1" data-rotate="90">
         <p>Cinder Backend for Glance</p>
-       </div>
+       </section>
 
-      <div class="step invisible" data-x="-7500" data-y="1000" data-scale="1" data-rotate="90">
+      <section data-x="-7500" data-y="1000" data-scale="1" data-rotate="90">
          <p>Example: API Node HA</p>
          <img class="with-heading" src="ha_stateless.svg" alt="High availability for an API Node (stateless)" />
-      </div>      
+      </section>      
 
       <div id="compute" class="step opaque" data-x="-1500" data-y="2000" data-scale="2">
         <h1>Compute</h1>
-      </div>
+      </section>
 
-      <div class="step invisible" data-x="-4500" data-y="0" data-scale="1" data-rotate="90">
+      <section data-x="-4500" data-y="0" data-scale="1" data-rotate="90">
         <p><strong>Host evacuation</strong></p>
         <p> <em>nova host-evacuate</em></p>
-       </div>
-      <div class="step invisible" data-x="-4500" data-y="0" data-scale="1" data-rotate="90">
+       </section>
+      <section data-x="-4500" data-y="0" data-scale="1" data-rotate="90">
         <p><b>query-scheduler</b></p>
-       </div>
-        <div class="step invisible" data-x="-4500" data-y="0" data-scale="1" data-rotate="90">
+       </section>
+        <section data-x="-4500" data-y="0" data-scale="1" data-rotate="90">
         <p>query-scheduler: Important stepping stone toward guest HA</p>
-       </div>
-      <div class="step invisible" data-x="-6500" data-y="-1000" data-scale="1" data-rotate="90">
+       </section>
+      <section data-x="-6500" data-y="-1000" data-scale="1" data-rotate="90">
         <p>No evacuation support in <strong>Horizon</strong> (for Havana).</p>
-      </div>    
+      </section>    
       <div id="quantum" class="step opaque" data-x="1500" data-y="2000" data-scale="2">
         <h1>Networking</h1>
-      </div>
-      <div class="step invisible" data-x="2500" data-y="2000" data-scale="1" data-rotate="-90">
+      </section>
+      <section data-x="2500" data-y="2000" data-scale="1" data-rotate="-90">
         <p>OpenStack Networking is an <strong>infrastructure service</strong> that can use
          the same HA approach as all others for <strong>Active/Passive&nbsp;failover.</strong></p>
         <img class="full" src="pacemaker_logo.svg" alt="Pacemaker logo"/>
-      </div>
-     <div class="step invisible" data-x="-4500" data-y="0" data-scale="1" data-rotate="90">
+      </section>
+     <section data-x="-4500" data-y="0" data-scale="1" data-rotate="90">
         <p><b>No multi_host </b></p>
-       </div>
+       </section>
 
-    <div class="step invisible" data-x="-4500" data-y="0" data-scale="1" data-rotate="90">
+    <section data-x="-4500" data-y="0" data-scale="1" data-rotate="90">
         <p><b>Improving L3 agent</b></p>
-       </div>
-    <div class="step invisible" data-x="-4500" data-y="0" data-scale="1" data-rotate="90">
+       </section>
+    <section data-x="-4500" data-y="0" data-scale="1" data-rotate="90">
         <p><b>Highly Available virtual router.</b></p>
-       </div>
-      <div class="step opaque" data-x="1500" data-y="0" data-scale="2">
+       </section>
+      <section data-x="1500" data-y="0" data-scale="2">
         <h1>Storage</h1>
-      </div>
-    <div class="step invisible" data-x="-4500" data-y="0" data-scale="1" data-rotate="90">
+      </section>
+    <section data-x="-4500" data-y="0" data-scale="1" data-rotate="90">
         <p>cinder volume options for GlusterFS/NFS</p>
-       </div>
-     <div class="step invisible" data-x="-4500" data-y="0" data-scale="1" data-rotate="90">
+       </section>
+     <section data-x="-4500" data-y="0" data-scale="1" data-rotate="90">
         <p><b>Swift</b></p>
         <p>Global clusters support</p>
-       </div>
-      <div class="step invisible" data-x="0" data-y="12000" data-scale="1">
+       </section>
+      <section data-x="0" data-y="12000" data-scale="1">
         <p><b>Heat</b></p>
-      </div>
-      <div class="step invisible" data-x="0" data-y="12000" data-scale="1">
+      </section>
+      <section data-x="0" data-y="12000" data-scale="1">
         <p>Heat</p>
         <p><i> HEAT::HA::HARestarter</i></p>
-      </div>
-      <div class="step invisible" data-x="0" data-y="12000" data-scale="1">
+      </section>
+      <section data-x="0" data-y="12000" data-scale="1">
         <p>HA for services running inside an instance.</p>
-      </div>
+      </section>
 
-      <div class="step invisible" data-x="0" data-y="12000" data-scale="1">
+      <section data-x="0" data-y="12000" data-scale="1">
         <p>HA for individual instances.</p>
-      </div>
+      </section>
 
-      <div class="step invisible" data-x="0" data-y="12000" data-scale="1">
+      <section data-x="0" data-y="12000" data-scale="1">
         <p>HA for stacks.</p>
-      </div>
+      </section>
 
-      <div class="step invisible" data-x="0" data-y="12000" data-scale="1">
+      <section data-x="0" data-y="12000" data-scale="1">
         <p><b>Ceilometer</b></p>
-      </div>
-      <div class="step invisible" data-x="0" data-y="12000" data-scale="1">
+      </section>
+      <section data-x="0" data-y="12000" data-scale="1">
         <p>Active/Passive HA for Central Agent</p>
-      </div>
+      </section>
       
-      <div class="step invisible" data-x="0" data-y="16000" data-scale="1">
+      <section data-x="0" data-y="16000" data-scale="1">
         <p>And there is <strong>almost&nbsp;certainly</strong> stuff that we omitted.</p>
-      </div>
-      <div class="step invisible" data-x="0" data-y="20000" data-scale="1">
+      </section>
+      <section data-x="0" data-y="20000" data-scale="1">
         <p>Liked this talk?</p>
         <p><code>@hastexo</code>
         <p class="small"><a href="" ></a></p>
         <p class="small"><a href="" ></a></p>
         <p><a href="http://creativecommons.org/licenses/by-sa/3.0/"><img src="by-sa.svg" alt="CC-BY-SA 3.0" /></a></p>
-      </div>
+      </section>
 
-    </div>
-  </div>
+    </section>
+  </section>
 
     <script src="lib/js/head.min.js"></script>
     <script src="js/reveal.min.js"></script>
