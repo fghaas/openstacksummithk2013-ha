@@ -20,198 +20,198 @@
   <body>
     <div class="reveal">
       <div class="slides">
-      <section>
-        <img class="with-heading" src="openstack-logo.svg"/>
-        <h3>High Availability Update</h3>
-        <p>Havana &amp; Icehouse</p>
-      </section>
+	<section>
+	  <img class="with-heading" src="openstack-logo.svg"/>
+	  <h3>High Availability Update</h3>
+	  <p>Havana &amp; Icehouse</p>
+	</section>
 
-      <section>
-      <section>
-        <p>Who are these guys?</p>
-      </section>
-      <section>
-        <h3>Florian Haas</h3>
-        <p><a href="http://www.hastexo.com/who/florian">http://www.hastexo.com/who/florian</a></p>
-        <p><a href="http://goo.gl/ANHQe">http://goo.gl/ANHQe</a></p>
-        <p><code>florian@hastexo.com</code></p>
-        <p><a href="https://twitter.com/hastexo"><code>@hastexo</code></a></p>
-      </section>
+	<section>
+	  <section>
+	    <p>Who are these guys?</p>
+	  </section>
+	  <section>
+	    <h3>Florian Haas</h3>
+	    <p><a href="http://www.hastexo.com/who/florian">http://www.hastexo.com/who/florian</a></p>
+	    <p><a href="http://goo.gl/ANHQe">http://goo.gl/ANHQe</a></p>
+	    <p><code>florian@hastexo.com</code></p>
+	    <p><a href="https://twitter.com/hastexo"><code>@hastexo</code></a></p>
+	  </section>
 
-     <section>
-        <h3>Syed Armani</h3>
-        <p><a href="http://www.hastexo.com/who/florian">Senior Consultant at hastexo</a></p>        
-        <p><code>syed.armani@hastexo.com</code></p>
-        <p><a href="https://twitter.com/syedarmani"><code>@syedarmani</code></a></p>
-      </section> 
-      </section>
+	  <section>
+	    <h3>Syed Armani</h3>
+	    <p><a href="http://www.hastexo.com/who/florian">Senior Consultant at hastexo</a></p>        
+	    <p><code>syed.armani@hastexo.com</code></p>
+	    <p><a href="https://twitter.com/syedarmani"><code>@syedarmani</code></a></p>
+	  </section> 
+	</section>
 
-      <section>
-    <section>
-        <p>We don't want this</p>
-        <img class="full" src="matrix.gif" alt="matrix"/>
-      </section>
+	<section>
+	  <section>
+	    <p>We don't want this</p>
+	    <img class="full" src="matrix.gif" alt="matrix"/>
+	  </section>
 
-      <section>
-        <img class="full" src="linux-ha.svg"/>
-      </section>
-      </section>
+	  <section>
+	    <img class="full" src="linux-ha.svg"/>
+	  </section>
+	</section>
 
-      <section>
-      <section id="infrastructure">
-        <h1>Infrastructure</h1>
-      </section>
-      <section>
-        <p><strong>Infrastructure HA</strong> is high availability for OpenStack Infrastructure Services.</p>
-        <p>Think ... <strong>Database, AMQP&nbsp;server, API services, etc.</strong></p>
-      </section>
-      <section>
-        <p>We have to consider at least <strong>7</strong> OpenStack <strong>node types</strong> for Infrastructure HA.</p>
-      </section>
-      <section>
-        <p>Cloud Controller</p>
-        <p>API Node</p>
-        <p>Network Node</p>
-        <p>Compute Node</p>
-        <p>Storage Controller</p>
-	<p>Metering Node</p>
-	<p>Orchestration Node</p>
-      </section>
-      <section>
-        <p>All can use the <strong>same&nbsp;high&nbsp;availability&nbsp;stack,</strong> just with different configurations.</p>
-      </section>
-      <section>
-        <img class="full" src="pacemaker_logo.svg" alt="Pacemaker logo"/>
-      </section>
-      <section>
-        <p>We have <strong>reference&nbsp;configurations</strong> for Pacemaker and OpenStack HA,
-        covering all OpenStack Infrastructure Services.</p>
-      </section>
-      <section>
-         <p>Example: Cloud Controller HA</p>
-         <img class="with-heading" src="ha_stateful.svg" alt="High availability for a Cloud Controller (with shared storage)" />
-      </section>
-      
-      <section>
-        <p>Highly Available MySql using <b>Galera</b></p>
-       </section>
-      <section>
-        <img class="full" src="galera.png"/>
-      <p>Multi-Master MySql with Galera</p>
-      </section>
-      <section>
-        <p>RabbitMQ/Kombu</p>
-      </section>
-      <section>
-        <p><strong>Glance</strong></p>
-        <p>Multiple image locations</p>
-       </section>
-      <section>
-        <p>Cinder Backend for Glance</p>
-       </section>
+	<section>
+	  <section id="infrastructure">
+	    <h1>Infrastructure</h1>
+	  </section>
+	  <section>
+	    <p><strong>Infrastructure HA</strong> is high availability for OpenStack Infrastructure Services.</p>
+	    <p>Think ... <strong>Database, AMQP&nbsp;server, API services, etc.</strong></p>
+	  </section>
+	  <section>
+	    <p>We have to consider at least <strong>7</strong> OpenStack <strong>node types</strong> for Infrastructure HA.</p>
+	  </section>
+	  <section>
+	    <p>Cloud Controller</p>
+	    <p>API Node</p>
+	    <p>Network Node</p>
+	    <p>Compute Node</p>
+	    <p>Storage Controller</p>
+	    <p>Metering Node</p>
+	    <p>Orchestration Node</p>
+	  </section>
+	  <section>
+	    <p>All can use the <strong>same&nbsp;high&nbsp;availability&nbsp;stack,</strong> just with different configurations.</p>
+	  </section>
+	  <section>
+	    <img class="full" src="pacemaker_logo.svg" alt="Pacemaker logo"/>
+	  </section>
+	  <section>
+	    <p>We have <strong>reference&nbsp;configurations</strong> for Pacemaker and OpenStack HA,
+	    covering all OpenStack Infrastructure Services.</p>
+	  </section>
+	  <section>
+	    <p>Example: Cloud Controller HA</p>
+	    <img class="with-heading" src="ha_stateful.svg" alt="High availability for a Cloud Controller (with shared storage)" />
+	  </section>
+	  
+	  <section>
+	    <p>Highly Available MySql using <b>Galera</b></p>
+	  </section>
+	  <section>
+	    <img class="full" src="galera.png"/>
+	    <p>Multi-Master MySql with Galera</p>
+	  </section>
+	  <section>
+	    <p>RabbitMQ/Kombu</p>
+	  </section>
+	  <section>
+	    <p><strong>Glance</strong></p>
+	    <p>Multiple image locations</p>
+	  </section>
+	  <section>
+	    <p>Cinder Backend for Glance</p>
+	  </section>
 
-      <section>
-         <p>Example: API Node HA</p>
-         <img class="with-heading" src="ha_stateless.svg" alt="High availability for an API Node (stateless)" />
-      </section>      
-      </section>
+	  <section>
+	    <p>Example: API Node HA</p>
+	    <img class="with-heading" src="ha_stateless.svg" alt="High availability for an API Node (stateless)" />
+	  </section>      
+	</section>
 
-      <section>
-      <section id="compute">
-        <h1>Compute</h1>
-      </section>
+	<section>
+	  <section id="compute">
+	    <h1>Compute</h1>
+	  </section>
 
-      <section>
-        <p><strong>Host evacuation</strong></p>
-        <p> <em>nova host-evacuate</em></p>
-       </section>
-      <section>
-        <p><b>query-scheduler</b></p>
-       </section>
-        <section>
-        <p>query-scheduler: Important stepping stone toward guest HA</p>
-       </section>
-      <section>
-        <p>No evacuation support in <strong>Horizon</strong> (for Havana).</p>
-      </section>
-      </section>
+	  <section>
+	    <p><strong>Host evacuation</strong></p>
+	    <p> <em>nova host-evacuate</em></p>
+	  </section>
+	  <section>
+	    <p><b>query-scheduler</b></p>
+	  </section>
+	  <section>
+	    <p>query-scheduler: Important stepping stone toward guest HA</p>
+	  </section>
+	  <section>
+	    <p>No evacuation support in <strong>Horizon</strong> (for Havana).</p>
+	  </section>
+	</section>
 
-      <section>
-      <section id="quantum">
-        <h1>Networking</h1>
-      </section>
-      <section>
-        <p>OpenStack Networking is an <strong>infrastructure service</strong> that can use
-         the same HA approach as all others for <strong>Active/Passive&nbsp;failover.</strong></p>
-        <img class="full" src="pacemaker_logo.svg" alt="Pacemaker logo"/>
-      </section>
-     <section>
-        <p><b>No multi_host </b></p>
-       </section>
+	<section>
+	  <section id="quantum">
+	    <h1>Networking</h1>
+	  </section>
+	  <section>
+	    <p>OpenStack Networking is an <strong>infrastructure service</strong> that can use
+	    the same HA approach as all others for <strong>Active/Passive&nbsp;failover.</strong></p>
+	    <img class="full" src="pacemaker_logo.svg" alt="Pacemaker logo"/>
+	  </section>
+	  <section>
+	    <p><b>No multi_host </b></p>
+	  </section>
 
-    <section>
-        <p><b>Improving L3 agent</b></p>
-       </section>
-    <section>
-        <p><b>Highly Available virtual router.</b></p>
-       </section>
-      <section>
-        <h1>Storage</h1>
-      </section>
-    <section>
-        <p>cinder volume options for GlusterFS/NFS</p>
-       </section>
+	  <section>
+	    <p><b>Improving L3 agent</b></p>
+	  </section>
+	  <section>
+	    <p><b>Highly Available virtual router.</b></p>
+	  </section>
+	  <section>
+	    <h1>Storage</h1>
+	  </section>
+	  <section>
+	    <p>cinder volume options for GlusterFS/NFS</p>
+	  </section>
 
-    </section>
+	</section>
 
-     <section>
-        <p><b>Swift</b></p>
-        <p>Global clusters support</p>
-       </section>
+	<section>
+	  <p><b>Swift</b></p>
+	  <p>Global clusters support</p>
+	</section>
 
-       <section>
-      <section>
-        <p><b>Heat</b></p>
-      </section>
-      <section>
-        <p>Heat</p>
-        <p><i> HEAT::HA::HARestarter</i></p>
-      </section>
-      <section>
-        <p>HA for services running inside an instance.</p>
-      </section>
+	<section>
+	  <section>
+	    <p><b>Heat</b></p>
+	  </section>
+	  <section>
+	    <p>Heat</p>
+	    <p><i> HEAT::HA::HARestarter</i></p>
+	  </section>
+	  <section>
+	    <p>HA for services running inside an instance.</p>
+	  </section>
 
-      <section>
-        <p>HA for individual instances.</p>
-      </section>
+	  <section>
+	    <p>HA for individual instances.</p>
+	  </section>
 
-      <section>
-        <p>HA for stacks.</p>
-      </section>
-       </section>
+	  <section>
+	    <p>HA for stacks.</p>
+	  </section>
+	</section>
 
-       <section>
-      <section>
-        <p><b>Ceilometer</b></p>
-      </section>
-      <section>
-        <p>Active/Passive HA for Central Agent</p>
-      </section>
-       </section>
-      
-      <section>
-        <p>And there is <strong>almost&nbsp;certainly</strong> stuff that we omitted.</p>
-      </section>
-      <section>
-        <p>Liked this talk?</p>
-        <p><code>@hastexo</code>
-        <p class="small"><a href="" ></a></p>
-        <p class="small"><a href="" ></a></p>
-        <p><a href="http://creativecommons.org/licenses/by-sa/3.0/"><img src="by-sa.svg" alt="CC-BY-SA 3.0" /></a></p>
-      </section>
+	<section>
+	  <section>
+	    <p><b>Ceilometer</b></p>
+	  </section>
+	  <section>
+	    <p>Active/Passive HA for Central Agent</p>
+	  </section>
+	</section>
+	
+	<section>
+	  <p>And there is <strong>almost&nbsp;certainly</strong> stuff that we omitted.</p>
+	</section>
+	<section>
+	  <p>Liked this talk?</p>
+	  <p><code>@hastexo</code>
+	  <p class="small"><a href="" ></a></p>
+	  <p class="small"><a href="" ></a></p>
+	  <p><a href="http://creativecommons.org/licenses/by-sa/3.0/"><img src="by-sa.svg" alt="CC-BY-SA 3.0" /></a></p>
+	</section>
 
-    </section>
-  </div>
+      </section>
+    </div>
 
     <script src="lib/js/head.min.js"></script>
     <script src="js/reveal.min.js"></script>
