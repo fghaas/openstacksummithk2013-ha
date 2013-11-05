@@ -17,8 +17,9 @@
       document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
     </script>
   </head>
-  <body class="impress-not-supported">
-    <div id="impress">
+  <body>
+    <div class="reveal">
+      <div class="slides">
       <div class="step slide invisible" data-x="0" data-y="-2000" data-scale="1">
         <img class="with-heading" src="openstack-logo.svg" style="float:left; margin-right: 5%;"/>
         <p>High Availability Update</p>
@@ -194,6 +195,7 @@
       </div>
 
     </div>
+  </div>
 
     <script src="lib/js/head.min.js"></script>
     <script src="js/reveal.min.js"></script>
