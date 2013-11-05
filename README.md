@@ -4,14 +4,14 @@ Syed Armani & Florian Haas
 November 6, 2013
 Hong Kong
 
-These slides rely on impress.js, which they expect to be checked out
-into a sibling directory named `impress.js`.
+These slides rely on reveal.js, which they expect to be checked out
+into a sibling directory named `reveal.js`.
 
 In other words, after you clone _this_ repository, make sure you do
 the following:
 
     cd ..
-    git clone git://github.com/bartaz/impress.js
+    git clone git://github.com/hakimel/reveal.js/
 
 Then, just open `index.html` (from this repo) in your favorite browser.
 We've found Chrome/Chromium to work best; in Firefox the transitions and
